@@ -1,18 +1,17 @@
+import DisplayCard from "@/components/DisplayCard";
 import Head from "next/head";
-import useSWR from 'swr'
+// import useSWR from 'swr'
 
 export default function Home() {
-  const { data } = useSWR('https://pokeapi.co/api/v2/generation/3/');
+  // const { data } = useSWR('https://pokeapi.co/api/v2/');
 
   return (
     <>
     <Head>
-      <title>OLRT Crack</title>
+      <title>OLRT Crack Hack</title>
     </Head>
-    <main>
-      <h1>Verifications:</h1>
-
-      <div>{ JSON.stringify(data) }</div>
+    <main className="w-screen h-screen flex justify-center shadow-2xl items-center bg-[url('/back.png')]">
+      <DisplayCard></DisplayCard>
     </main>
     </>
   )
