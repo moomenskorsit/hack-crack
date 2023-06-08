@@ -40,6 +40,7 @@ export const options = {
     },
     scales: {
         y: {  // not 'yAxes: [{' anymore (not an array anymore)
+            stacked: true,
             ticks: {
               color: "white", // not 'fontColor:' anymore
               // fontSize: 18,
@@ -51,6 +52,7 @@ export const options = {
             }
           },
           x: {  // not 'xAxes: [{' anymore (not an array anymore)
+            stacked: true,
             ticks: {
               color: "white",  // not 'fontColor:' anymore
               //fontSize: 14,
@@ -70,12 +72,14 @@ export const options = {
     labels,
     datasets: [
       {
+        fill: true,
         label: 'Failed ver',
         data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
         borderColor: 'rgb(255, 0, 0)',
         backgroundColor: 'rgba(255, 0, 0, 0.4)',
       },
       {
+        fill: true,
         label: 'Success ver',
         data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
         borderColor: 'rgb(0, 255, 0)',
