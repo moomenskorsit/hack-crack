@@ -12,6 +12,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Filler,
   } from 'chart.js';
   ChartJS.register(
     CategoryScale,
@@ -20,7 +21,8 @@ import {
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+      Filler,
   );
 
 export const options = {
@@ -34,22 +36,33 @@ export const options = {
         text: 'Chart.js Line Chart',
       },
     },
+    scales: {
+        y: {
+            stacked: true,
+            title: {
+                display: true,
+                text: 'Value'
+            }
+        }
+    }
   };
-  
+
   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  
+
   export const data = {
     labels,
     datasets: [
       {
+        fill: true,
         label: 'Dataset 1',
-        data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+        data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
       {
+        fill: true,
         label: 'Dataset 2',
-        data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+        data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
       },
