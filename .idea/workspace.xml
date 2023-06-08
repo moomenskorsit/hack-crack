@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ec33b95-5d19-4516-8058-507d7f0e1d94" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/incredible0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/incredible1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/incredible2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/incredible3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MrIncredible.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/incredible0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/incredible1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/incredible2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/incredible3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DisplayCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DisplayCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +39,8 @@
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "js.last.introduce.type": "LET",
+    "last_opened_file_path": "/Users/rickvandenheuvel/Projects/hack-crack/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,6 +52,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686226600673</updated>
-      <workItem from="1686226603386" duration="1138000" />
+      <workItem from="1686226603386" duration="4511000" />
     </task>
     <servers />
   </component>
