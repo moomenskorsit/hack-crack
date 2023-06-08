@@ -10,7 +10,7 @@ export default function Home() {
     <Head>
       <title>OLRT Crack Hack</title>
     </Head>
-    <main className="w-screen h-screen flex justify-center shadow-2xl items-center bg-[url('/back.png')]">
+    <main className="w-screen h-screen flex justify-center shadow-2xl items-center bg-cover bg-[url('/back.png')]">
       <DisplayCard></DisplayCard>
     </main>
     </>

@@ -2,7 +2,7 @@ import { FC } from "react"
 import { faker } from '@faker-js/faker';
 
 
-import {Chart, Line} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -47,7 +47,7 @@ export const options = {
               font: {
                 size: 12, // 'size' now within object 'font {}'
               },
-              stepSize: 100,
+              stepSize: 50,
               beginAtZero: true
             }
           },
@@ -59,7 +59,7 @@ export const options = {
               font: {
                 size: 12 // 'size' now within object 'font {}'
               },
-              stepSize: 100,
+              stepSize: 50,
               beginAtZero: true
             }
           }
@@ -73,15 +73,15 @@ export const options = {
     datasets: [
       {
         fill: true,
-        label: 'Failed ver',
-        data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+        label: 'Failed verifications',
+        data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
         borderColor: 'rgb(255, 0, 0)',
         backgroundColor: 'rgba(255, 0, 0, 0.4)',
       },
       {
         fill: true,
-        label: 'Success ver',
-        data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
+        label: 'Success verifications',
+        data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
         borderColor: 'rgb(0, 255, 0)',
         backgroundColor: 'rgba(0, 255, 0, 0.4)',
       },
@@ -90,10 +90,12 @@ export const options = {
 
 const DisplayCard: FC = () => {
     return (
-        <div className="w-4/5 h-4/5 bg-slate-900 rounded-2xl flex flex-col">
+        <div className="w-4/5 bg-slate-900 rounded-2xl flex flex-col">
             <div className="p-8 flex flex-col justify-center items-center">
                 <h1 className="font-bold text-2xl">Order Verification Dashboard</h1>
                 <Line options={options} data={data} />
+                <div className="flex">
+                </div>
             </div>
         </div>
     )
