@@ -12,6 +12,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Filler,
   } from 'chart.js';
   ChartJS.register(
     CategoryScale,
@@ -20,7 +21,8 @@ import {
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+      Filler,
   );
 
 export const options = {
@@ -61,9 +63,9 @@ export const options = {
           }
       }
   };
-  
+
   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  
+
   export const data = {
     labels,
     datasets: [
