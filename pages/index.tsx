@@ -21,7 +21,7 @@ export default function Home() {
     </Head>
     <main className="w-screen h-screen flex justify-center shadow-2xl items-center bg-cover bg-[url('/back.png')]">
       <DisplayCard></DisplayCard>
-      <MrIncredible failCount={300}></MrIncredible>
+      <MrIncredible failCount={400}></MrIncredible>
     </main>
     </>
   )

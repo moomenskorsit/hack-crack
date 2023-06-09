@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 import { SWRConfig } from 'swr'
 import { Roboto } from 'next/font/google';
 
-const optionen = { fetcher: fetcher };
+const optionen = { fetcher: fetcher, refreshInterval: 20000 };
 
 const roboto = Roboto({
   weight: ['400', '700'],

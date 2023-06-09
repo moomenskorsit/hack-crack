@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactFragment, ReactPortal } from "react"
 import { faker } from '@faker-js/faker';
 
 
@@ -14,6 +14,7 @@ import {
     Legend,
     Filler,
   } from 'chart.js';
+import useSWR from "swr";
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -66,34 +67,49 @@ export const options = {
       }
   };
 
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-  export const data = {
-    labels,
-    datasets: [
-      {
-        fill: true,
-        label: 'Failed verifications',
-        data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
-        borderColor: 'rgb(255, 0, 0)',
-        backgroundColor: 'rgba(255, 0, 0, 0.4)',
-      },
-      {
-        fill: true,
-        label: 'Success verifications',
-        data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
-        borderColor: 'rgb(0, 255, 0)',
-        backgroundColor: 'rgba(0, 255, 0, 0.4)',
-      },
-    ],
-  };
 
-const DisplayCard: FC = () => {
+
+
+  type DataType = {
+    datetime: string,
+    cancelled: number,
+    finished: number,
+  }
+
+  
+  const DisplayCard: FC = () => {
+    const { data, error } = useSWR('http://172.17.0.149:5000/api/test');
+
+    const labels = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00'];
+
+    console.log(labels);
+
+ const chartData = {
+        labels,
+        datasets: [
+          {
+            fill: true,
+            label: 'Failed verifications',
+            data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
+            borderColor: 'rgb(255, 0, 0)',
+            backgroundColor: 'rgba(255, 0, 0, 0.4)',
+          },
+          {
+            fill: true,
+            label: 'Success verifications',
+            data: labels.map(() => faker.number.int({ min: 0, max: 500 })),
+            borderColor: 'rgb(0, 255, 0)',
+            backgroundColor: 'rgba(0, 255, 0, 0.4)',
+          },
+        ],
+      };
+
     return (
         <div className="w-4/5 bg-slate-900 rounded-2xl flex flex-col">
             <div className="p-8 flex flex-col justify-center items-center">
                 <h1 className="font-bold text-2xl">Order Verification Dashboard</h1>
-                <Line options={options} data={data} />
+                <Line options={options} data={chartData} />
                 <div className="flex">
                 </div>
             </div>
